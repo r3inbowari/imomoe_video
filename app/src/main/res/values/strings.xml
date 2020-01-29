@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">樱花动漫</string>
+
+    <!-- 搜索转场动画 -->
+    <string name="trans_anim_search_tv">search_tv_anim</string>
+    <string name="trans_anim_search_layout">search_layout_anim</string>
+    <string name="trans_anim_search_iv">search_iv_anim</string>
+    <string name="trans_anim_search_edit">search_edit_anim</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

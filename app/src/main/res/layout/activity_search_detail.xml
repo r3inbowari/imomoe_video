@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_size_50"
+        android:background="#2D2D2D"
+        android:paddingLeft="@dimen/dimen_size_15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_search_gray"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_size_10"
+                android:paddingTop="@dimen/dimen_size_8"
+                android:paddingRight="@dimen/dimen_size_10"
+                android:paddingBottom="@dimen/dimen_size_8"
+                android:transitionName="@string/trans_anim_search_layout">
+
+                <ImageView
+                    android:id="@+id/search_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/search_icon"
+                    android:transitionName="@string/trans_anim_search_iv" />
+
+                <EditText
+                    android:id="@+id/search_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_size_5"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:hint="输入搜索关键字"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="#F0E2E2"
+                    android:textColorHint="#787878"
+                    android:textSize="@dimen/font_size_13"
+                    android:transitionName="@string/trans_anim_search_edit" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/search_cancle_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_size_15"
+                android:paddingTop="@dimen/dimen_size_10"
+                android:paddingRight="@dimen/dimen_size_15"
+                android:paddingBottom="@dimen/dimen_size_10">
+
+                <TextView
+                    android:id="@+id/search_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text="取消"
+                    android:textColor="#787878"
+                    android:textSize="@dimen/font_size_14"
+                    android:transitionName="@string/trans_anim_search_tv" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--    暂时不用-->
+    <View
+        android:id="@+id/divide_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFF2F2F2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1B1B1B">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorColor="#A59D9D"
+            app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+        <TextView
+            android:id="@+id/bangumi_nothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="这里什么也找不到呢..."
+            android:textColor="#A59D9D"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:divider="#000000"
+            android:dividerHeight="10dp" />
+    </RelativeLayout>
+</LinearLayout>
